@@ -16,7 +16,7 @@ module.exports = {
       // GIT remote/branch
       ref: "origin/master",
       // GIT ssh远程地址 需配置
-      repo: "git@github.com/TopSchoolwangyubia/testPM2.git",
+      repo: "git@github.com:TopSchoolwangyubia/testPM2.git",
       // 放入服务器端地址 需配置
       path: "/usr/local/src/testPM2",
       // post-deploy action
