@@ -1,11 +1,10 @@
-const path = require("path");
-const host = "47.93.194.56";
+const host = "47.93.194.56"
 module.exports = {
   apps: [
     {
       name: "app",
       script: "./server/index.js",
-      cwd: path.resolve(__dirname, "./"), // 当前工作路径
+      cwd: "./", // 当前工作路径
       max_memory_restart: "10000M",
       ignore_watch: [
         // 从监控目录中排除
@@ -36,4 +35,4 @@ module.exports = {
       // post-deploy action
       "post-deploy": "npm install && pm2 reload pm2.config.js",
     },
-};
+}
