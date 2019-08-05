@@ -20,7 +20,7 @@ module.exports = {
       // 放入服务器端地址 需配置
       path: "/usr/local/src/testPM2",
       // post-deploy action
-      "post-deploy": "npm install && pm2 reload "
+      "post-deploy": "npm install && pm2 reload app"
     }
   }
 };
