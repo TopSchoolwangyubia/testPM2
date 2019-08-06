@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "nuxt": "nuxt build",
     "dev": "pm2 start ecosystem.config.js",
-    "start": "pm2 start ecosystem.config.js --env production"
+    "start": "pm2 start ecosystem.config.js --env production",
+    "deploy": "pm2 deploy ecosystem.config.js production  update"
   },
   "author": "",
   "license": "ISC",
