@@ -29,7 +29,7 @@ module.exports = {
       path: "/usr/local/src/server",
       // post-deploy action
       "post-deploy":
-        "npm install && npm run nuxt &&  pm2 reload ecosystem.config.js production"
+        "npm install && npm run nuxt &&  pm2 reload ecosystem.config.js --env production"
     }
   }
 };
