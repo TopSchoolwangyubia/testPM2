@@ -7,12 +7,16 @@
 
 <script type='text/ecmascript-6'>
 import { MessageBox } from "mint-ui";
+import { request } from "@/plugins/axios";
 export default {
   data() {
     return {};
   },
   mounted() {
-    console.log(this.$browser);
+    console.log(this.$axios);
+    request("post", "/stat/get_user_info.do", { user_id: "" }).then(res => {
+      console.log(res);
+    });
   },
   methods: {
     alertr() {

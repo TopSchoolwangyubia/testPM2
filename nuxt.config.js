@@ -78,15 +78,17 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    // transpile: [/^element-ui/],
-
-    /*
-     ** You can extend webpack config here
-     */
+    vendor: ["axios", "babel-polyfill"],
     extend(config, ctx) {
-      // 配置sass
-      // const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader');
-      // vueLoader.options.loaders.sass = 'vue-style-loader!css-loader!sass-loader';
+      if (ctx.isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          // loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        });
+      }
+      config.resolve.alias["vue"] = "vue/dist/vue.common";
     }
   }
 };
