@@ -3,7 +3,15 @@ module.exports = {
   apps: [
     {
       name: "app",
-      script: "./server/index.js"
+      script: "./server/index.js",
+      env: {
+        NODE_ENV: "development",
+        PORT: 3010
+      },
+      env_production: {
+        NODE_ENV: "production",
+        PORT: 3011
+      }
     }
   ],
   deploy: {
@@ -20,7 +28,8 @@ module.exports = {
       // 放入服务器端地址 需配置
       path: "/usr/local/src/server",
       // post-deploy action
-      "post-deploy": "npm install && pm2 reload ecosystem.config.js"
+      "post-deploy":
+        "npm install && npm run nuxt &&  pm2 reload ecosystem.config.js production"
     }
   }
 };
