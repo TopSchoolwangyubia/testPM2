@@ -27,7 +27,10 @@ module.exports = {
       }
     ]
   },
-  css: ["~/assert/css/bootstrap-reboot.min.css", "~/assert/css/animation.css"],
+  css: [
+    // "~/assert/css/bootstrap-reboot.min.css",
+    "~/assert/css/animation.css"
+  ],
   /*
    ** Customize the progress-bar color
    */

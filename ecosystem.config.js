@@ -1,4 +1,4 @@
-const host = "47.93.194.56";
+const serverHost = "47.93.194.56";
 module.exports = {
   apps: [
     {
@@ -20,7 +20,7 @@ module.exports = {
       // SSH user 需配置
       user: "root",
       // SSH host 需配置
-      host: [host],
+      host: [serverHost],
       // GIT remote/branch
       ref: "origin/master",
       // GIT ssh远程地址 需配置

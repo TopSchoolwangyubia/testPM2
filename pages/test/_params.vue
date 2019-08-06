@@ -5,9 +5,19 @@
 <script type='text/ecmascript-6'>
 export default {
   data() {
-    return {};
+    return {
+      title: "555"
+    };
   },
-  mounted() {}
+  mounted() {},
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: "description", name: "测试", content: "My custom description" }
+      ]
+    };
+  }
 };
 </script>
 
